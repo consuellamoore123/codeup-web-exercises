@@ -21,7 +21,10 @@
      * console.log 'helloMessage' to check your work
      */
 
-        var helloMessage = sayHello('Connie');
+        var helloMessage ='Connie';
+        console.log(helloMessage);
+        sayHello(helloMessage);
+
 
     /**
      * TODO:
@@ -71,7 +74,7 @@
      * > calculateTip(0.15, 33.42) // returns 5.013
      */
 function calculateTip(b, t) {
-    return b * t;
+    return b * t
     }
     console.log(calculateTip(.15, 200));
     /**
@@ -80,10 +83,10 @@ function calculateTip(b, t) {
      * prompt the user for the bill total and a percentage they would like to tip,
      * then display the dollar amount they should tip
      */
-    var bill = prompt('How much is the total bill');
-    var percTip = prompt('What percentage would you like to tip?');
+    var b = prompt('How much is the total bill');
+    var t = prompt('What percentage would you like to tip?');
 
-    alert('Thank you, I show the amount you should tip is $'  + calculateTip);
+    alert('Thank you, I show the amount you should tip is: $'  + calculateTip (b, t)+ '.');
     /**
      * TODO:
      * Create a function named `applyDiscount`. This function should accept a price
