@@ -44,10 +44,12 @@ if (userInput === 'Amazon') {
 //A student can be enrolled in a class only if the class is not full
 // and the class schedule does not conflict with her current schedule.
 
-var userInput = prompt('Which class will you be taking?');
-console.log('userInput');
-if (userInput === ('Math')
-alert('Sorry, but class is not full && class does not conflict with schedule');
-var English = ('class is full && class conflicts with schedule');
-
+var userInput = prompt('Will you be taking Math or English?');
+console.log(userInput);
+if (userInput === ('Math'){
+    alert('Sorry' + userInput + ' conflicts with your schedule');
+}
+if (userInput === ('English'){
+    alert('Great! I would be happy to enroll you in' +userInput + '.');
+}
 
