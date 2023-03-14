@@ -57,11 +57,11 @@
      * different result everytime you refresh the page if you are using the random
      * number)
      */
-    function isTwo(){
-    return random === 2;
+    function isTwo(num){
+        console.log(num);
+    return num === 2;
     }
-    console.log(random);
-    console.log(isTwo);
+    console.log(isTwo(random));
     /**
      * TODO:
      * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -101,6 +101,11 @@ function calculateTip(b, t) {
      *
      * > applyDiscount(45.99, 0.12) // 40.4712
      */
+    function applyDiscount(price, discount) {
+        return (price - (price * discount));
+    }
+
+    console.log(applyDiscount(198, .2));
 
 })();
 
