@@ -21,17 +21,17 @@
      * Test your function by passing various string literals to it and
      * console.logging the function's return value
      */
-    var input = 'blue'
-    function analyzeColor('input') {
-        if(input == blue) {
-            console.log(input + 'is the color of the sky');
-        }else if(input == red) {
-            console.log('strawberries are' + red + '.' );
-        } else {
-            console.log('I don't know anything about + input + '.');
-        }
-    }
-        conole.log(analyzeColor('input'));
+    // var input = 'blue'
+    // function analyzeColor(input) {
+    //     if(input === 'blue') {
+    //         return(input + ' is the color of the sky');
+    //     }else if(input === 'red') {
+    //         return('strawberries are ' + input + '.' );
+    //     } else {
+    //         return('I don\'t know anything about ' + input + '.');
+    //     }
+    // }
+    //     console.log(analyzeColor(input));
 
 
 
@@ -47,11 +47,26 @@
      * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
      * You should see a different message every time you refresh the page
      */
+    // console.log(analyzeColor(randomColor));
+
 
     /**
      * TODO:
      * Comment out the code above, and refactor your function to use a switch-case statement
      */
+    var colorAnalyze = prompt('What is your favorite color?');
+    switch(colorAnalyze) {
+        case 'blue':
+            alert('The sky is blue.');
+                break;
+        case 'red':
+            alert('strawberries are red.');
+                break;
+        default:
+            ('I don\'t know anything about ' + colorAnalyze + '.');
+                break;
+    }
+
 
     /**
      * TODO:
@@ -59,7 +74,12 @@
      * user to your `analyzeColor` function. Alert the return value from your
      * function to show it to the user.
      */
+        var favoriteColor = prompt('What is your favorite color?');
+        function analyzeColor (favoriteColor){
+            return alert(favoriteColor);
 
+    }
+            console.log(analyzeColor(favoriteColor))
     /* ########################################################################## */
 
     /**
@@ -81,6 +101,29 @@
      * Test your function by passing it various values and checking for the expected
      * return value.
      */
+        function calculateTotal(n, t){
+            switch(n){
+                case 0:
+                    return t
+                case 1:
+                    return t -= t * .10
+                case 2:
+                    return t -= t * .25
+                case 3:
+                    return t -= t * .35
+                case 4:
+                    return t -= t * .50
+                case 5:
+                    return t -= t * 1.00
+            }
+
+    }
+        console.log(calculateTotal(0, 100));
+        console.log(calculateTotal(1, 100));
+        console.log(calculateTotal(2,100));
+        console.log(calculateTotal(3, 100));
+        console.log(calculateTotal(4, 100));
+        console.log(calculateTotal(5, 100));
 
     /**
      * TODO:
