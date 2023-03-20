@@ -10,10 +10,10 @@
      * planetsArray.
      * console.log planetsArray to check your work
      */
-
-        // console.log(planetsArray);
     var planetsArray = planetsString.split(",");
-    console.log(planetsArray)
+        console.log(planetsArray);
+
+
 
     /**
      * TODO:
@@ -30,15 +30,20 @@
 
         console.log(planets)
 
-   planetsArray.sort(function(){
-       return 0.5 - Math.random()});
-       var html = '<ul>';
 
-       for (var i = 0; i < planetsArray.length; i++) {
-            html += "<li>" + planetsArray[i] + "</li>"
-       }
+    // var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
+    // planetsString = planetsString.split(',');
+    // planetsString.sort(function(){
+    //    return 0.5 - Math.random()});
+    //    var html = '<ul>';
+    //
+    //    for (var i = 0; i < planetsString.length; i++) {
+    //         html += '<li>' + planetsString[i] + '</li>';
+    //    }
+    //
+    //    html += '</ul>'
 
-       html += '</ul>'
+
 
 
 

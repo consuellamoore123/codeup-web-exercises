@@ -19,10 +19,10 @@
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-    console.log(names)[0];
-    console.log(names)[1];
-    console.log(names)[2];
-    console.log(names)[3];
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
@@ -57,17 +57,17 @@
     function first(arr){
         return arr[0];
     }
-    console.log(first(numbers);
+    console.log(first(names));
 
     function second(arr){
         return arr[1];
     }
-    console.log(second(numbers));
+    console.log(second(names));
 
-    function last() {
-        return [arr.length];
+    function last(arr) {
+        return arr[arr.length-1];
     }
-    console.log(last(numbers));
+    console.log(last(names));
 
 
 
