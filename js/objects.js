@@ -79,41 +79,53 @@
      */
 var books = [
         {
-            name: "last Girl Ghosted",
-            authorFirstName: "Lisa",
-            authorLastName: "Unger",
-            Store: "Barnes and Noble"
+            title: "last Girl Ghosted",
+            author: {
+                firstName: "Lisa",
+                lastName: "Unger",
+            },
+            store: "Barnes and Noble"
         },
 
         {
-            name: "Broken",
-            authorFirstName: "Brooke",
-            authorLastName: "Linford",
-            Store: "Books for less"
+            title: "Broken",
+            author: {
+                firstName: "Brooke",
+                lastName: "Linford",
+            },
+            store: "Books for less"
         },
 
         {
-            name: "last Lie Told",
-            authorFirstName: "Debra",
-            authorLastName: "Webb",
-            Store: "Kindle"
+            title: "last Lie Told",
+            author: {
+                firstName: "Debra",
+                lastName: "Webb",
+            },
+            store: "Kindle"
         },
 
         {
-            name: "China Doll",
-            authorFirstName: "Talia",
-            authorLastName: "Carner",
-            Store: "Nowhere Bookshop"
+            title: "China Doll",
+            author: {
+                firstName: "Talia",
+                lastName: "Carner",
+            },
+            store: "Nowhere Bookshop"
         },
 
         {
-            name: "last Girl Ghosted",
-            authorFirstName: "Lisa",
-            authorLastName: "Unger",
-            Store: "Barnes and Noble"
+            title: "Dust Bowl Orphans",
+            author: {
+                firstName: "Suzette",
+                lastName: "Harrison",
+            },
+            store: "Half Price Books"
         }
-
     ]
+    console.log(books[0].title)
+    console.log(books[2].store)
+    console.log(books[3].author.lastName)
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -138,7 +150,12 @@ var books = [
      *      ---
      *      ...
      */
-
+    books.forEach(function(book, i){
+        console.log("Book: # " + (i + 1));
+        console.log("Title: " + book.title);
+        console.log("Author:" + book.author.firstName + book.author.lastName);
+        console.log("...");
+    });
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
