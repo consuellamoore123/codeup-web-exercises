@@ -32,7 +32,7 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    console.log( "Hello from " + person.firstName  +  person.lastName + "!" );
+    console.log( "Hello from " + person.firstName  + " " +  person.lastName + "!" );
 
 
 
@@ -153,7 +153,7 @@ var books = [
     books.forEach(function(book, i){
         console.log("Book: # " + (i + 1));
         console.log("Title: " + book.title);
-        console.log("Author:" + book.author.firstName + book.author.lastName);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
         console.log("...");
     });
     /**
@@ -181,7 +181,7 @@ var books = [
     var showBookInfo = function(book, i){
         console.log("Book: # " + (i + 1));
         console.log("Title: " + book.title);
-        console.log("Author:" + book.author.firstName + book.author.lastName);
+        console.log("Author: " + book.author.firstName + " " +  book.author.lastName);
         console.log("...");
     };
     books.forEach(showBookInfo);
