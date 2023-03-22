@@ -22,34 +22,37 @@ console.log(userTotal);
 // they pay you a different rate per hour.
 // Google pays $400, Amazon $380, and Facebook $350.
 // How much will you receive in payment for this week?
-// You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
 
-var google = 400;
-var amazon = 380;
-var facebook = 350;
+var Google = 400;
+var Amazon =  380;
+var Facebook = 350;
 var userInput = prompt('Which company did you work for?');
 console.log(userInput);
-var userHours = prompt('How many hours did you work?');
-console.log('user worked' + userHours + ' hours');
-if (userInput === 'Facebook') {
-    alert ('Thank you, you earned $' + userHours * 350);
+var userHours = prompt('How many hours did you work?')
+console.log(userHours)
+if (userInput === Facebook) {
+    alert ('Thank you, you earned $' + (Facebook * userHours));
 }
-if(userInput === 'Google') {
-    alert('Thank you, you earned $' + userHours * 400);
+else if(userInput === Google) {
+    alert('Thank you, you earned $' + (userHours * userHours));
 }
-if (userInput === 'Amazon') {
-    alert('Thank you, you earned $' + userHours * 380);
+else (userInput === Amazon)
+{
+    alert('Thank you, you earned $' + (userHours * userHours));
 }
 
 //A student can be enrolled in a class only if the class is not full
 // and the class schedule does not conflict with her current schedule.
-
-var userInput = prompt('Will you be taking Math or English?');
-console.log(userInput);
-if (userInput === ('Math'){
-    alert('Sorry' + userInput + ' conflicts with your schedule');
+var class1 = (Math)
+var class2 = (History)
+var input = prompt('What class would you like to take?');
+console.log(input);
+if (input = Math) {
+    alert('Sorry' + input + ' conflicts with your schedule');
 }
-if (userInput === ('English'){
-    alert('Great! I would be happy to enroll you in' +userInput + '.');
+else if (input = History) {
+    alert('Great! I would be happy to enroll you in' + input + '.');
+} else{
+        alert('I will be happy to enroll you in' + input + '.')
 }
 
