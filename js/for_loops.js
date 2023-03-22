@@ -34,7 +34,7 @@ for (var i = 0; i < 10; i++) {
 for (var i = 0; i < 10; i++) {
     var str = "";
     for (var a = 0; a < i; a++){
-        str = str + i;
+        str = str + 1;
     }
     console.log(str);
 }
@@ -43,7 +43,9 @@ for(var i = 100; i >= 5; i -=5){
     console.log(i)
 }
 
-
+for(var i = 1; i < 11; i+=1){
+    console.log(i)
+}
 
 
 
