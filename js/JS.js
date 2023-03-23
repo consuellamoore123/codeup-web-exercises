@@ -150,15 +150,18 @@
 //}
 //}
 
-var waterbottle = {
+// var waterbottle = {
+//
+//     size: 'large',
+//     color: 'blue',
+//     hasStraw: true,
+//     brand: 'Yetti',
+// }
+//
+// console.log(waterbottle.color);
 
-    size: 'large',
-    color: 'blue',
-    hasStraw: true,
-    brand: 'Yetti',
-}
 
-console.log(waterbottle.color);
+
 
 
 
