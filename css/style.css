@@ -1,5 +1,20 @@
 
-.fancy-header {
+    .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
 }
+h1 { text-align: center; }
+
+html{ background-color: yellow; }
+
+h2 { color: blue; }
+
+html { background-image: url(https://alumni.codeup.com/link-preview.jpg);
+    background - position; center
+    center;
+    background-size: 100% 100%;
+    }
+
+ul { list-style: square;}
+
+
