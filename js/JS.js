@@ -160,113 +160,113 @@
 //
 // console.log(waterbottle.color);
 
-
-//1. Define a function named `isBoolean` that takes in a value
-//and returns a boolean if the argument
-//provided is a boolean value or not.
-var input = true
-function isBoolean(input){
-    return typeof input == "Boolean";
-}console.log(isBoolean(true))
-
-
-//Define a function named `isNotString` that accepts an input
-// and returns `true` or `false` based on whether an input is not a string.
-// Numeric strings will count as strings and should return `false`.
-var input = "Hi"
-function isNotString(input) {
-    return typeof input !== "String";
-}console.log(isNotString("hi"));
-
-
-//Define a function named `isString` that
-// takes in a value as an input and returns a boolean
-// if the input provided is a string or not.
-// Numeric strings will count as strings and should return true.
-var input = 1
-function isString(input) {
-    return typeof input == "String";
-}
-console.log(isString(1))
-
-
-//Define a function named `isEmptyString` that will return `true`
-// when passed an argument with the value of "", i.e. an empty string.
-// All other arguments should return false.
-
-var input = ""
-    function emptyString(input) {
-    return input === "";
-}
-console.log(emptyString(""))
-
-
-//Define a function named `isNotANumber` that accepts an input and
-// returns `true` or `false` based on whether an input is a non-numeric value or not.
-// Numbers as strings are not a number and should return true.
-var input = "hi"
-
-    function isNotANumber(input) {
-    return typeof input !== "Number";
-}
-console.log(isNotANumber("hi"))
-
-
-//Define a function named `isNegative` that accepts a number and
-// returns `true` or `false` based on whether the input is less than zero.
-var input = 3
-    function isNegative(input) {
-    return input < 0;
-}
-console.log(isNegative(3))
-
-
-// Define a function named `isPositive` that accepts an input and
-// returns `true` or `false` based on whether the input is above zero.
-// Any non-numeric input should return false.
-var input = -2
-function isPositive(input) {
-    return input > 0;
-}
-console.log(isPositive(-2));
-
-// Define a function named `isZero` that will return `true`
-// when passed an argument of the numeric value `0`, and
-// return `false` for all other arguments.
-var input = 4
-    function isZero(input) {
-    return input == 0;
-}
-console.log(isZero(4))
-
-
-// Define a function named `isArray` that takes in an input and
-// returns a boolean whether or not that input is an array or not.
-
-    var input = [1, 2, 3]
-    function isAnArray(input) {
-    return Array.isArray(input);
-}
-    console.log(isAnArray([1, 2, 3]));
-
-
-//Define a function named `upperCase` that takes in a single input.
-// If the input is not a string, return `false`. If the input is a non-numeric string,
-// then return it with all the letters capitalized.
 //
-// function upperCase(input) {
-//     if (isNotString()){
-//     return  false
-// }   else {
+// //1. Define a function named `isBoolean` that takes in a value
+// //and returns a boolean if the argument
+// //provided is a boolean value or not.
+// var input = true
+// function isBoolean(input){
+//     return typeof input == "Boolean";
+// }console.log(isBoolean(true))
+//
+//
+// //Define a function named `isNotString` that accepts an input
+// // and returns `true` or `false` based on whether an input is not a string.
+// // Numeric strings will count as strings and should return `false`.
+// var input = "Hi"
+// function isNotString(input) {
+//     return typeof input !== "String";
+// }console.log(isNotString("hi"));
+//
+//
+// //Define a function named `isString` that
+// // takes in a value as an input and returns a boolean
+// // if the input provided is a string or not.
+// // Numeric strings will count as strings and should return true.
+// var input = 1
+// function isString(input) {
+//     return typeof input == "String";
+// }
+// console.log(isString(1))
+//
+//
+// //Define a function named `isEmptyString` that will return `true`
+// // when passed an argument with the value of "", i.e. an empty string.
+// // All other arguments should return false.
+//
+// var input = ""
+//     function emptyString(input) {
+//     return input === "";
+// }
+// console.log(emptyString(""))
+//
+//
+// //Define a function named `isNotANumber` that accepts an input and
+// // returns `true` or `false` based on whether an input is a non-numeric value or not.
+// // Numbers as strings are not a number and should return true.
+// var input = "hi"
+//
+//     function isNotANumber(input) {
+//     return typeof input !== "Number";
+// }
+// console.log(isNotANumber("hi"))
+//
+//
+// //Define a function named `isNegative` that accepts a number and
+// // returns `true` or `false` based on whether the input is less than zero.
+// var input = 3
+//     function isNegative(input) {
+//     return input < 0;
+// }
+// console.log(isNegative(3))
+//
+//
+// // Define a function named `isPositive` that accepts an input and
+// // returns `true` or `false` based on whether the input is above zero.
+// // Any non-numeric input should return false.
+// var input = -2
+// function isPositive(input) {
+//     return input > 0;
+// }
+// console.log(isPositive(-2));
+//
+// // Define a function named `isZero` that will return `true`
+// // when passed an argument of the numeric value `0`, and
+// // return `false` for all other arguments.
+// var input = 4
+//     function isZero(input) {
+//     return input == 0;
+// }
+// console.log(isZero(4))
+//
+//
+// // Define a function named `isArray` that takes in an input and
+// // returns a boolean whether or not that input is an array or not.
+//
+//     var input = [1, 2, 3]
+//     function isAnArray(input) {
+//     return Array.isArray(input);
+// }
+//     console.log(isAnArray([1, 2, 3]));
+//
+//
+// //Define a function named `upperCase` that takes in a single input.
+// // If the input is not a string, return `false`. If the input is a non-numeric string,
+// // then return it with all the letters capitalized.
+// //
+// // function upperCase(input) {
+// //     if (isNotString()){
+// //     return  false
+// // }   else {
+// //         return input.toUpperCase();
+// //     }
+// // }
+// var input = "be"
+// function upperCase(input){
+//     if(typeof input != "string"){
+//         return false
+//     }else {
 //         return input.toUpperCase();
 //     }
 // }
-var input = "be"
-function upperCase(input){
-    if(typeof input != "string"){
-        return false
-    }else {
-        return input.toUpperCase();
-    }
-}
-console.log(upperCase("be"))
+// console.log(upperCase("be"))
