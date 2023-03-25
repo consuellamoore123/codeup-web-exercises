@@ -17,4 +17,13 @@ html { background-image: url(https://alumni.codeup.com/link-preview.jpg);
 
 ul { list-style: square;}
 
+html { font-family: Helvetica, Arial, Sans-Serif; }
+
+td { font-size: 15px; }
+tr { font-size: 12px; }
+tr { text-indent: 50px; }
+
+a:link {
+        color:red;
+
 
