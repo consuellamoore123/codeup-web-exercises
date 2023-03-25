@@ -14,14 +14,18 @@ html { background-image: url(https://alumni.codeup.com/link-preview.jpg);
     center;
     background-size: 100% 100%;
     }
-
+p {color: blue;}
 ul { list-style: square;}
+ul {color: darkorange;}
+ol {color: darkorange;}
 
 html { font-family: Helvetica, Arial, Sans-Serif; }
 
 td { font-size: 15px; }
+td{color: darkorange;}
 tr { font-size: 12px; }
 tr { text-indent: 50px; }
+tr { color: white;}
 
 a:link {
         color:red;
