@@ -21,9 +21,11 @@
      * console.log 'helloMessage' to check your work
      */
 
-        var helloMessage ='Connie';
-        console.log(helloMessage);
-        sayHello(helloMessage);
+
+    var helloMessage = "Connie";
+    console.log(helloMessage);
+    sayHello(helloMessage);
+
 
 
     /**
@@ -32,7 +34,7 @@
      * variable to the 'sayHello' function. You should see the same output in the
      * console.
      */
-    var myName = sayHello('Connie')
+    var myName = "Connie"
 
 
 
