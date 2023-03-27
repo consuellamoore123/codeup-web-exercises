@@ -9,8 +9,8 @@ html{ background-color: yellow; }
 
 h2 { color: blue; }
 
-html { background-image: url(https://alumni.codeup.com/link-preview.jpg);
-    background - position; center
+body { background-image: url(https://alumni.codeup.com/link-preview.jpg);
+    background - position; center;
     center;
     background-size: 100% 100%;
     }
@@ -19,9 +19,10 @@ ul { list-style: square;}
 ul {color: darkorange;}
 ol {color: darkorange;}
 
-html { font-family: Helvetica, Arial, Sans-Serif; }
+body { font-family: Helvetica, Arial, Sans-Serif; }
 
-td { font-size: 15px; }
+
+    td { font-size: 15px; }
 td{color: darkorange;}
 tr { font-size: 12px; }
 tr { text-indent: 50px; }
