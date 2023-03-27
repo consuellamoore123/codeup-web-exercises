@@ -5,7 +5,7 @@
 }
 h1 { text-align: center; }
 
-html{ background-color: yellow; }
+body{ background-color: yellow; }
 
 h2 { color: blue; }
 
@@ -22,7 +22,7 @@ ol {color: darkorange;}
 body { font-family: Helvetica, Arial, Sans-Serif; }
 
 
-    td { font-size: 15px; }
+td { font-size: 15px; }
 td{color: darkorange;}
 tr { font-size: 12px; }
 tr { text-indent: 50px; }
