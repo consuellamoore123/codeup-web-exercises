@@ -15,7 +15,7 @@ body { background-image: url(https://alumni.codeup.com/link-preview.jpg);
     background-size: 100% 100%;
     }
 p {color: blue;}
-ul { list-style: square;}
+ul {list-style: square;}
 ul {color: darkorange;}
 ol {color: darkorange;}
 
@@ -28,7 +28,24 @@ tr { font-size: 12px; }
 tr { text-indent: 50px; }
 tr { color: white;}
 
-a:link {
+    /* unvisited link (:link) */
+    a:link {
         color:red;
+    }
+
+    /* visited link (:visited) */
+    a:visited {
+        color:black;
+    }
+
+    /* mouse hover over link (:hover) */
+    a:hover {
+        color:blue;
+    }
+
+    /* active/selected link (:active) */
+    a:active {
+        color:green;
+    }
 
 
