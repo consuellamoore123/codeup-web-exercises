@@ -11,26 +11,43 @@ body, html {
     padding: 8px;
     border: 1px solid grey
 }
+
+:root {
+    --bg-info: #CDDEFF;
+    --text-info: #A7B2E4;
+    --bg-success: #CFF3DA;
+    --text-success: #BDE6CA;
+    --bg-warning: #FCFBCA;
+    --text-warning: #AC9E48;
+    --bg-error: #FAD3D7;
+    --text-error: #9B3E53;
+}
 .message-info {
-    background-color: #CDDEFF;
-    color: #A7B2E4;
-
-
-}
-.message message-warning {
-    background-color: lightgreen;
-    color: green;
+    /*background-color: #CDDEFF;*/
+    /*color: #A7B2E4;*/
+    background-color: var(--bg-info);
+    color: var(--text-info);
 }
 
-}
+
 .message-success {
-    background-color: lightgreen;
-    color: green;
+    /*background-color: #CFF3DA;*/
+    /*color: #BDE6CA;*/
+    background-color: var(--bg-success);
+    color: var(--text-success)
 }
 
+.message-warning {
+    /*background-color: #FCFBCA;*/
+    /*color: #AC9E48;*/
+    background-color: var(--bg-warning);
+    color: var(--text-warning);
 }
-.message message-warning{
-    background-color: lightgreen;
-    color: green;
+
+.message-error {
+    /*background-color: #FAD3D7;*/
+    /*color: #9B3E53;*/
+    background-color: var(--bg-error);
+    color: var(--text-error);
 }
 
