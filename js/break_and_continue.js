@@ -3,16 +3,17 @@
 // var random = Math.floor((Math.random()*50)+1);
 
 var input = prompt("Please provide an odd number");
+console.log(input)
 
 
 
 
-
-for(var i = 1; i < 100; i++) {
+for(var i = 1; i < 50; i++) {
     if (i % 2 === 0) {
         continue
     }
     if (i == input){
+        console.log("Yikes! Skipping number: " + i);
         continue
     }
     else {
