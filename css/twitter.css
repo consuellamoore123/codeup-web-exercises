@@ -55,10 +55,16 @@ a {
     height: 80px;
 }
 
+.profile-image{
+    position: absolute;
+    top: 275px
+
+
+}
+
 .profile-form{
     float: right;
-    center: auto;
-    line-height: 100px;
+    line-height: 80px;
 }
 .btn {
     border: 1px solid var(--main-link-color);
