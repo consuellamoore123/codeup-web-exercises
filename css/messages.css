@@ -14,9 +14,9 @@ body, html {
 
 :root {
     --bg-info: #CDDEFF;
-    --text-info: #A7B2E4;
+    --text-info: #6565B4;
     --bg-success: #CFF3DA;
-    --text-success: #BDE6CA;
+    --text-success: #01632C;
     --bg-warning: #FCFBCA;
     --text-warning: #AC9E48;
     --bg-error: #FAD3D7;
@@ -24,15 +24,15 @@ body, html {
 }
 .message-info {
     /*background-color: #CDDEFF;*/
-    /*color: #A7B2E4;*/
+    /*color: #6565B4;*/
     background-color: var(--bg-info);
     color: var(--text-info);
 }
 
 
 .message-success {
-    /*background-color: #CFF3DA;*/
-    /*color: #BDE6CA;*/
+    /*background-color: #CFF3DA*/
+    /*color: #01632C*/
     background-color: var(--bg-success);
     color: var(--text-success)
 }
