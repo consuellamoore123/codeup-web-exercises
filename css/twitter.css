@@ -91,7 +91,7 @@ a {
 
 .who-to-follow{
     float: left;
-    margin: 0em .5em 0 .5em;
+    margin: 0 .5em 0 .5em;
     width: calc(25% - 1em);
 }
 .container{
