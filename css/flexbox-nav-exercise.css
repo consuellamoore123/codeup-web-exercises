@@ -3,3 +3,18 @@
 nav{
     box-sizing: border-box;
 }
+.list-container{
+    display: flex;
+    margin: auto;
+    list-style-type: none;
+    justify-content: space-evenly;
+    font-weight: bolder;
+    background: #C1C1C1;
+
+}
+list-container {
+    margin: auto;
+    font-family: b;
+    font-color:
+}
+
