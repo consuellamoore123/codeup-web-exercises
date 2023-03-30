@@ -7,7 +7,7 @@ nav{
     box-sizing: border-box;
     display: flex;
     font-weight: bolder;
-    background: #C1C1C1;
+    background-color: #C1C1C1;
     font-family: "Work Sans";
     align-items: center;
     padding: 5px;
@@ -21,9 +21,15 @@ nav{
 }
 
 
-a{ text-decoration: none;
+a{ display: inline-block;
+    text-decoration: none;
     padding: 5px;
     color: black;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:blue;
 }
 
 #logo{
