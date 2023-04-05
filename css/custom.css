@@ -3,15 +3,21 @@
     Padding: 0;
 }
 
+        .jumbotron {
+            background-image: url("/cover/flexbox-cards.png");
+            background-size: cover;
+            height: 346px;
+            background-repeat: no-repeat;
+        }
+
+@media screen and (min-width: 250px) and (max-width:600px) {
     .jumbotron {
+        visibility: hidden;
         background-image: url("/cover/flexbox-cards.png");
         background-size: cover;
         height: 346px;
         background-repeat: no-repeat;
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bg-light-rgb), var(--bs-bg-opacity), (bg-gradient))
-
-
+    }
     }
 
 
