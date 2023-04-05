@@ -1,5 +1,16 @@
-/*.body {background-image: src="cover"*/
-/*    background - position; center;*/
-/*    center;*/
-/*    background-size: 346px*/
-/*}*/
+*{
+    margin: 0;
+    Padding: 0;
+}
+
+    .jumbotron {
+        background-image: url("/cover/flexbox-cards.png");
+        background-size: cover;
+        height: 346px;
+        background-repeat: no-repeat;
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bg-light-rgb), var(--bs-bg-opacity), (bg-gradient))
+
+
+    }
+
