@@ -10,7 +10,7 @@
             background-repeat: no-repeat;
         }
 
-@media screen and (min-width: 250px) and (max-width:600px) {
+@media screen and (min-width: 350px) and (max-width:600px) {
     .jumbotron {
         visibility: hidden;
         background-image: url("/cover/flexbox-cards.png");
