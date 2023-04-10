@@ -2,7 +2,7 @@
 
 
 
-function showMultiplicationTable(input) {
+function showMultiplicationTable(number) {
     var  number = 7;
 
     for (let i = 1; i <= 10; i++) {
@@ -16,7 +16,7 @@ showMultiplicationTable()
 
 //${} literally identify what is inside the brackets
 // var myName = 'Connie';
-// var mySchool = 'codeup';
+// var mySchool = 'Codeup';
 // console.log("Hi, I'm " + myName + " and I go to  " + mySchool); // Hi I'm Connie and I go to codeup
 // console.log(`Hi I'm ${myName} and I go to ${mySchool} and 2 + 4 = ${2 + 4}`); //  Hi I'm Connie and I go to codeup // back ticks and ${} to wrap variables or js
 
