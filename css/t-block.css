@@ -3,7 +3,7 @@
     Padding: 0;
 }
 
-@media screen and (min-width: 700px) and (max-width:1500px) {
+@media screen and (min-width: 768px) and (max-width:1500px) {
     h4 {
         color: #4F83FB;
         font-weight: bold;
