@@ -4,8 +4,10 @@
 }
 
 @media screen and (min-width: 700px) and (max-width:1500px) {
-    h3 {
-        color: blue;
+    h4 {
+        color: #4F83FB;
+        font-weight: bold;
+
     }
 }
 
