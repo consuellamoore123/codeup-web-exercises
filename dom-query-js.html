@@ -14,6 +14,9 @@
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
+
+
+
 <h2 id="sub-header">Hello Again.</h2>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -25,19 +28,31 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="main-header-change">mainHeader</button>
+<button id="sub-header-change">subHeader</button>
+<button id="list-change">list</button>
+<button id="sub-paragraph-change">paras!</button>
+
 <script>
     (function() {
         "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById("main-header");
-        console.log(mainHeader);
+
+        const mainHeaderChange = () => {
+            // TODO: Uncomment next line and get the main header element by id
+            let mainHeader = document.getElementById("main-header");
+            console.log(mainHeader);
 
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool"
+            // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+
+            mainHeader.innerHTML = "JavaScript is Cool"
+        }
+
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
         console.log(subHeader);
+
+
 
         // TODO: Set the text color of subHeader to blue
         subHeader.style.color = "blue"
@@ -59,8 +74,6 @@
                 listItems[i].style.color = "blue"
             }
         }
-        //test
-
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
@@ -68,6 +81,14 @@
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
             subParagraphs[0].innerText = "Mission Accomplished!"
+
+        let mainbutton = document.querySelector(".main-header-change");
+        let subbutton = document.querySelector(".sub-header-change");
+        let listbutton = document.querySelector(".list-change");
+        let parabutton = document.querySelector(".sub-Paragraph-change");
+
+        mainbutton.addEventListener('click', mainHeaderChange);
+
     })();
 </script>
 </body>
