@@ -28,10 +28,14 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
-<button id="main-header-change">mainHeader</button>
-<button id="sub-header-change">subHeader</button>
-<button id="list-change">list</button>
-<button id="sub-paragraph-change">paras!</button>
+<button id="change-main">Change Main Header</button>
+<br><br>
+<button id="change-sub">Change Sub-Header</button>
+<br><br>
+<button id="change-list">Change list</button>
+<br><br>
+<button id="change-para">Change Paras</button>
+<br><br>
 
 <script>
     (function() {
@@ -39,55 +43,68 @@
 
         const mainHeaderChange = () => {
             // TODO: Uncomment next line and get the main header element by id
-            let mainHeader = document.getElementById("main-header");
-            console.log(mainHeader);
 
+            var mainHeader = document.getElementById('main-header');
+            // console.log(mainHeader);
 
             // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
-            mainHeader.innerHTML = "JavaScript is Cool"
+            mainHeader.innerHTML = "JavaScript is Cool";
         }
 
-        // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.getElementById("sub-header");
-        console.log(subHeader);
+
+        const subHeaderChange = () => {
+            // TODO: Uncomment the next line and get the sub header element by id
+            var subHeader = document.getElementById("sub-header");
+            // console.log(subHeader);
 
 
-
-        // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue"
+            // TODO: Set the text color of subHeader to blue
+            subHeader.setAttribute('style', 'color: blue;');
+        }
         // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName("li");
-        console.log(listItems)
+        var listItemsChange = () => {
+            var listItems = document.getElementsByTagName("li");
+            console.log(listItems)
+            // TODO: Set text color on every other list item to grey
+            for (var i = 0; i < listItems.length; i++) {
+                console.log(listItems[i]);
+                if (i % 2 != 0) {
+                    listItems[i].style.color = "grey"
+                }
 
-        // TODO: Set text color on every other list item to grey
-        for (var i = 0; i < listItems.length; i++) {
-            console.log(listItems[i]);
-            if(i % 2 != 0){
-               listItems[i].style.color = "grey"
+            }
+
+            // TODO: Set text color of li with dbid = 1 to blue
+            for (var i = 0; i < listItems.length; i++) {
+                if (listItems[i].getAttribute("data-dbid") == 1) {
+                    listItems[i].style.color = "blue"
+                }
             }
         }
+            var paraChange = () => {
+                // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+                var subParagraphs = document.getElementsByClassName("sub-paragraph");
+                // console.log(subParagraphs)
 
-        // TODO: Set text color of li with dbid = 1 to blue
-        for (var i = 0; i < listItems.length; i++) {
-            if (listItems[i].getAttribute("data-dbid") == 1){
-                listItems[i].style.color = "blue"
+                // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+                subParagraphs[0].innerText = "Mission Accomplished!"
             }
-        }
 
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName("sub-paragraph");
-        console.log(subParagraphs)
+        let mainButton = document.querySelector("#change-main");
+        let subButton = document.querySelector("#change-sub");
+        let listButton = document.querySelector("#change-list");
+        let paraButton = document.querySelector("#change-para");
 
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-            subParagraphs[0].innerText = "Mission Accomplished!"
+        mainButton.addEventListener('click', mainHeaderChange);
+        subButton.addEventListener('click', subHeaderChange);
+        listButton.addEventListener('click', listItemsChange);
+        paraButton.addEventListener('click', paraChange);
 
-        let mainbutton = document.querySelector(".main-header-change");
-        let subbutton = document.querySelector(".sub-header-change");
-        let listbutton = document.querySelector(".list-change");
-        let parabutton = document.querySelector(".sub-Paragraph-change");
 
-        mainbutton.addEventListener('click', mainHeaderChange);
+
+
+
 
     })();
 </script>
