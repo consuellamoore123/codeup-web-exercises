@@ -1,8 +1,14 @@
 "use strict";
-$(function() {
-    alert( 'The DOM has finished loading!' );
-});
+// $(function() {
+//  alert( 'The DOM has finished loading!' );
+// });
+//
+//  var content = $("#item-1").text();
+//  alert(content);
+//
+// $('.para').css('border', '1px solid red');
+
+$('.list').css('font-size', '20px');
 
 
- var content = $("#item-1").text();
- alert(content);
+$('h1, p, li').css('background-color', 'yellow');
