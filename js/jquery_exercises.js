@@ -4,4 +4,5 @@ $(function() {
 });
 
 
-
+ var content = $("#item-1").text();
+ alert(content);
