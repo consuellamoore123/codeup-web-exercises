@@ -8,11 +8,38 @@
 //
 // $('.para').css('border', '1px solid red');
 
-$('.list').css('font-size', '20px');
+// $('.list').css('font-size', '20px');
+//
+// // $('h1').css('background-color', 'yellow');
+// // $('p').css('background-color', 'yellow');
+// // $('li').css('background-color', 'yellow');
+//
+//
+// $('h1, p, li').css('background-color', 'yellow');
 
-// $('h1').css('background-color', 'yellow');
-// $('p').css('background-color', 'yellow');
-// $('li').css('background-color', 'yellow');
+// $('#codeup').hover(
+//     function() {
+//
+//     },
+//     function() {
+//         $(this).css('background-color', '#FFF');
+//     }
+// );
+
+$('h1').click(function() {
+    $('h1').css('background-color', 'yellow');
+});
+
+$('p').dblclick(function(e) {
+    $('p').css('font-size', '18px');
+});
 
 
-$('h1, p, li').css('background-color', 'yellow');
+$('.item-list').hover(
+    function() {
+        $('.item-list').css('color', 'red');
+    },
+    function() {
+        $('.item-list').css('color', 'black');
+    }
+);
