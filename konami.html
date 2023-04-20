@@ -2,32 +2,29 @@
 <html>
 <head>
     <title>Konami Code</title>
+    <link rel="stylesheet" type="text/css" src="css/konami.css">
 </head>
 <body>
 <h1>Konami Code</h1>
 
+<div id="word"></div>
+<div id="guesses"></div>
+<div id="buttons"></div>
+<div id="result"></div>
+
+<div id="pin-wheel">
+    <div class="pin"></div>
+    <div class="pin"></div>
+    <div class="pin"></div>
+    <div class="pin"></div>
+    <div class="pin"></div>
+    <div class="pin"></div>
+    <div class="pin"></div>
+    <div class="pin"></div>
+</div>
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
-
-<script>
-
-    "use strict";
-    var str = ""
-    $(document).on("keyup", function(e){
-        str = str +  e.keyCode
-        console.log(e.keyCode);
-        if (str === "3838404037393739666513"){
-            alert("You have added 30 lives!");
-        }
-    });
-
-
-
-
-
-
-
-</script>
+<script src="js/konami.js"></script>
 
 
 

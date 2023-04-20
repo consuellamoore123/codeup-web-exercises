@@ -1,0 +1,33 @@
+#pin-wheel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.pin {
+    width: 20px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #555;
+    margin: 5px;
+    transform-origin: bottom center;
+    animation: spin 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.pin:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+.pin:nth-child(even) {
+    animation-delay: 0.2s;
+}
