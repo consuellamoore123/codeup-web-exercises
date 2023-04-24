@@ -1,106 +1,129 @@
 "use strict";
 
 
-var str = ""
-$(document).on("keyup", function(e){
-    str = str + e.keyCode
-    console.log(e.keyCode);
-    if (str === "3838404037393739666513"){
-        $('body').css('background-color', 'pink')
-        alert("You have added 30 lives!");
-    }
-});
+//     var str = ""
+//     $(document).on("keyup", function (e) {
+//         str = str + e.keyCode
+//         console.log(e.keyCode);
+//         if (str === "3838404037393739666513") {
+//             $('body').css('background-color', 'indigo')
+//             alert("You have added 30 lives!");
+//
+//         }
+//     });
+// // Define an array of words to choose from
+//     var words = ["javascript", "jquery", "html", "css", "python", "ruby"];
+//
+// // Choose a random word
+//     var word = words[Math.floor(Math.random() * words.length)];
+//
+// // Define the initial state of the game
+//     var guesses = [];
+//     var lives = 10;
+//
+// // Display the word as underscores
+//     var displayWord = "";
+//     for (var i = 0; i < word.length; i++) {
+//         displayWord += "_";
+//     }
+//     $("#word").text(displayWord);
+
+// Handle key press events
+//     $(document).on("keypress", function (event) {
+//         // Get the pressed key
+//         var key = String.fromCharCode(event.which).toLowerCase();
+//
+//         // Check if the key has already been guessed
+//         if (guesses.indexOf(key) !== -1) {
+//             $("#message").text("You already guessed that letter.");
+//             return;
+//         }
+//
+//         // Add the key to the list of guesses
+//         guesses.push(key);
+//
+//         // Check if the key is in the word
+//         if (word.indexOf(key) !== -1) {
+//             // Update the displayed word with the guessed letter
+//             var newDisplayWord = "";
+//             for (var i = 0; i < word.length; i++) {
+//                 if (word[i] === key) {
+//                     newDisplayWord += key;
+//                 } else {
+//                     newDisplayWord += displayWord[i];
+//                 }
+//             }
+//             displayWord = newDisplayWord;
+//             $("#word").text(displayWord);
+//
+//             // Check if the word has been completely guessed
+//             if (displayWord.indexOf("_") === -1) {
+//                 $("#message").text("You win!");
+//                 return;
+//             }
+//         } else {
+//             // Decrement the remaining lives
+//             lives--;
+//             $("#message").text("Incorrect. You have " + lives + " lives remaining.");
+//
+//             // Check if the player has run out of lives
+//             if (lives === 0) {
+//                 $("#message").text("Game over. The word was '" + word + "'.");
+//                 return;
+//             }
+//         }
+//
+//         // Update the list of letters guessed
+//         $("#letters").text("Letters guessed: " + guesses.join(", "));
+//     });
 
 
-"use Strict"
+// //Create Wheel
 
+    // $(document).ready(function() {
+    //     function rotatePinwheel() {
+    //         $("#pinwheel").animate({deg: "+=360"}, {
+    //             duration: 2000,
+    //             step: function(now) {
+    //                 $(this).css({
+    //                     transform: "rotate(" + now + "deg)"
+    //                 });
+    //             },
+    //             complete: rotatePinwheel
+    //         });
+    //     }
+    //     rotatePinwheel();
+    // });
 
 $(document).ready(function() {
-    var words = ["javascript", "jquery", "html", "css", "python", "react", "keyup", "bootstrap", "coding"];
-    var word = words[Math.floor(Math.random() * words.length)];
-    var hiddenWord = "";
-    var remainingGuesses = 10;
-
-    for (var i = 0; i < word.length; i++) {
-        hiddenWord += "_";
-    }
-
-    $("#word").text(hiddenWord);
-    $("#guesses").text("Remaining Guesses: " + remainingGuesses);
-
-    for (var i = 65; i <= 90; i++) {
-        var letter = String.fromCharCode(i);
-        var button = $("<button>" + letter + "</button>");
-        button.click(function() {
-            var guess = $(this).text().toLowerCase();
-            var index = word.indexOf(guess);
-            if (index >= 0) {
-                hiddenWord = hiddenWord.substr(0, index) + guess + hiddenWord.substr(index + 1);
-                $("#word").text(hiddenWord);
-                if (hiddenWord == word) {
-                    $("#result").text("You Win!");
-                }
-            } else {
-                remainingGuesses--;
-                $("#guesses").text("Remaining Guesses: " + remainingGuesses);
-                if (remainingGuesses == 0) {
-                    $("#result").text("You Lose! The word was " + word + ".");
-                }
-            }
-            $(this).attributes("disabled", true);
-        });
-        $("#buttons").append(button);
-    }
-});
-
-"use strict"
-$(document).ready(function() {
-    var canvas = document.getElementById("myCanvas");
+    var canvas = document.getElementById("pinwheel");
     var context = canvas.getContext("2d");
+    var centerX = canvas.width / 2;
+    var centerY = canvas.height / 2;
+    var radius = canvas.width / 2 - 10;
+    var angle = 2 * Math.PI / 8;
+    var colors = ["#ffc107", "#2196f3", "#4caf50", "#e91e63", "#9c27b0", "#ff5722", "#795548", "#607d8b"];
 
+    // Draw the pinwheel
+    for (var i = 0; i < 8; i++) {
+        var startAngle = i * angle;
+        var endAngle = startAngle + angle;
+        context.beginPath();
+        context.moveTo(centerX, centerY);
+        context.arc(centerX, centerY, radius, startAngle, endAngle);
+        context.closePath();
+        context.fillStyle = colors[i];
+        context.fill();
+    }
 
-
-//Create the wheel and add colors
-
-var colors = ["red", "blue", "yellow", "orange", "green", "purple", "pink", "lime"];
-var segments = ["Prize 1", "Prize 2", "Prize 3", "Prize 4", "Prize 5", "Prize 6", "Prize 7", "Prize 8"];
-var startAngle = 0;
-var arc = Math.PI / 4;
-var centerX = canvas.width / 2;
-var centerY = canvas.height / 2;
-var radius = 200;
-
-for (var i = 0; i < segments.length; i++) {
-    var angle = startAngle + i * arc;
-    context.beginPath();
-    context.fillStyle = colors[i % colors.length];
-    context.moveTo(centerX, centerY);
-    context.arc(centerX, centerY, radius, angle, angle + arc, false);
-    context.lineTo(centerX, centerY);
-    context.fill();
-    context.save();
-
-    // Add the segment text here
-}
-for (var i = 0; i < segments.length; i++) {
-    var angle = startAngle + i * arc;
-    context.beginPath();
-    context.fillStyle = colors[i % colors.length];
-    context.moveTo(centerX, centerY);
-    context.arc(centerX, centerY, radius, angle, angle + arc, false);
-    context.lineTo(centerX, centerY);
-    context.fill();
-    context.save();
-
-    // Add the segment text here
-    context.fillStyle = "#FFFFFF";
-    context.translate(centerX, centerY);
-    context.rotate(angle + arc / 2);
-    context.textAlign = "center";
-    context.fillText(segments[i], radius / 2, 0);
-    context.restore();
-}
-
+    // Handle mouse click events
+    $("#pinwheel").click(function(e) {
+        var x = e.pageX - canvas.offsetLeft;
+        var y = e.pageY - canvas.offsetTop;
+        var angle = Math.atan2(y - centerY, x - centerX);
+        angle = angle < 0 ? angle + 2 * Math.PI : angle;
+        var sector = Math.floor(angle / (2 * Math.PI / 8));
+        var color = colors[sector];
+        $("body").css("background-color", color);
+    });
 });
-
-//Add a click event listener to the button that will spin the wheel using a random number generator. You can use the Math.random() method to generate a random number between 0 and 1, and then use the Math.floor() method to round down to the nearest integer. Multiply the random number
