@@ -85,31 +85,34 @@
     </dd>
 
 </dl>
-<h3>Acadia National Park</h3>
+<h3>Biscayne National Park</h3>
 <ul>
-    <li>first</li>
-    <li>second</li>
-    <li>third</li>
-    <li>fourth</li>
+    <li>located in Miami</li>
+    <li>Ocean contains over 600 species of fish</li>
+    <li>has one of the world's largest coral reef</li>
+    <li>Below the water surface, there are six shipwreck remains to explore</li>
 
 </ul>
-<h3>Arches National Park</h3>
+<h3>Bryce Canyon National Park</h3>
 <ul>
-    <li>first</li>
-    <li>second</li>
-    <li>third</li>
-    <li>fourth</li>
+    <li>Located in Utah</li>
+    <li>famous for the largest collections of hoodoo</li>
+    <li>Covers a vertical distance of over 2,000 feet</li>
+    <li>Great place for hiking and camping</li>
 
 </ul>
 <h3>Assaeague Island Nation Seashore</h3>
 <ul>
-    <li>first</li>
-    <li>second</li>
-    <li>third</li>
-    <li>fourth</li>
+
+
+    <li>Located in Virginia and Maryland</li>
+    <li>herds of wild Assateague horses roam the beaches and woods freely</li>
+    <li>established in 1965</li>
+    <li>Offers horse back riding along the beach</li>
 
 </ul>
 <a href="#" id="show">Click to toggle visibility</a>
+<button id="highlightbtn">Click to Highligh</button>
 
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -132,6 +135,33 @@
                 $("dd").toggleClass("invisible");
             });
         });
+
+        $(document).ready(function() {
+            $("#highlightbtn").click(function(event) {
+                event.preventDefault();
+                $('li').css('background-color', 'yellow');
+                $('li').parent().css('background-color', 'yellow');
+            });
+            });
+
+        $(document).ready(function() {
+            $("h3").click(function(event) {
+                event.preventDefault();
+                $('ul').children().css('font-weight', 'bold');
+
+            });
+        });
+
+        $(document).ready(function() {
+            $("li").click(function(event) {
+                event.preventDefault();
+                $('li').first().css("color", "blue");
+
+            });
+        });
+
+
+
 </script>
 
 
