@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Defiinition List</title>
+    <title>National Parks</title>
 
     <style>
         .invisible {
@@ -137,10 +137,10 @@
         });
 
         $(document).ready(function() {
-            $("#highlightbtn").click(function(event) {
+            $("#highlightbtn").click(function (event) {
                 event.preventDefault();
-                $('li').css('background-color', 'yellow');
-                $('li').parent().css('background-color', 'yellow');
+                $("ul li:last-child").css("background-color", "yellow");
+
             });
             });
 
