@@ -153,13 +153,12 @@
         });
 
         $(document).ready(function() {
-            $("li").click(function(event) {
-                event.preventDefault();
-                $('li').first().css("color", "blue");
+                    $("li").click(function (event) {
+                        event.preventDefault();
+                        $("ul li:first-child").css("color", "blue");
 
             });
         });
-
 
 
 </script>
