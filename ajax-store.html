@@ -19,6 +19,8 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
+<button id="refreshbtn">refresh</button>
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
@@ -35,17 +37,38 @@
         //       HINT: You will want to target #insertProducts for your new HTML elements
 
 
-        data.forEach(function(dataobject, index) {
+        data.forEach(function (dataObject, index) {
             // console.log(dataobject)
-            $('#insertProducts').append( `<tr> <td>${dataobject.title}</td> <td>${dataobject.quantity}</td> <td>${dataobject.price}</td> <td>${dataobject.categories}</td> </tr>`)
-
-
-
-
+            $('#insertProducts').append(`<tr> <td>${dataObject.title}</td> <td>${dataObject.quantity}</td> <td>${dataObject.price}</td> <td>${dataObject.categories}</td> </tr>`)
         });
+    });
 
+    let newItem = $.ajax('data/inventory.json', {
+        type: "POST",
+        data: {
+            title: "nails",
+            quantity: 20,
+            categories: [
+                "tool"
+            ],
+            price: 5
+        }
+
+    }).done(function(data) {
+    console.log(newItem)
+
+});
+
+
+       $("#refreshbtn").click(function(event) {
+           event.preventDefault();
+           $('data').reload('data/inventory.json');
 
     });
+
+
+
+
 
 })();
 </script>
