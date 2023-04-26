@@ -19,10 +19,10 @@
         data.forEach(function (dataObject, index) {
             console.log(dataObject)
             console.log(dataObject.title)
-            $('#post').append(`</div><p>${dataObject.title}</p> <p>${dataObject.content}</p> <p>${dataObject.categories}</p> <p>${dataObject.date}</p></div>`)
+            $('#post').append(`</div> <h2>${dataObject.title}</h2> <p>${dataObject.content}</p> <h3>Categories</h3><li>${dataObject.categories}</li> <span>${dataObject.date}</span></div>`)
 
 
-            // >${blogObject.categories}, ${blogObject.date} </div>`)
+
         });
     });
 
