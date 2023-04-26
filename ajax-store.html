@@ -2,6 +2,16 @@
 <html>
 <head>
     <title>Online Store</title>
+    <style>
+        body{
+            background-color: #3B94D9;
+            color: yellow;
+        }
+        #refreshbtn{
+            background-color: #D64933;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -43,26 +53,26 @@
         });
     });
 
-    let newItem = $.ajax('data/inventory.json', {
-        type: "POST",
-        data: {
-            title: "nails",
-            quantity: 20,
-            categories: [
-                "tool"
-            ],
-            price: 5
-        }
-
-    }).done(function(data) {
-    console.log(newItem)
-
-});
+//     let newItem = $.ajax('data/inventory.json', {
+//         type: "POST",
+//         data: {
+//             title: "nails",
+//             quantity: 20,
+//             categories: [
+//                 "tool"
+//             ],
+//             price: 5
+//         }
+//
+//     }).done(function(data) {
+//     console.log(newItem)
+//
+// });
 
 
        $("#refreshbtn").click(function(event) {
            event.preventDefault();
-           $('data').reload('data/inventory.json');
+           $(data).reload('data/inventory.json');
 
     });
 

@@ -22,13 +22,23 @@
             "gas",
             "outdoor"
         ],
-        "price": 200
-    }, {
+    "price": 200
+},
+    {
         "title": "Screwdrivers",
         "quantity": 25,
         "categories": [
             "tool"
         ],
         "price": 10
+    },
+    {
+        "title": "nails",
+        "quantity": 20,
+        "categories": [
+            "tool"
+        ],
+        "price": 5
     }
 ]
+
