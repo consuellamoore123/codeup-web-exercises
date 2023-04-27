@@ -34,8 +34,8 @@
     var map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        zoom: 5, // starting zoom
-        center: [-98.63892, 29.38096] // [lng, lat]
+        zoom: 15, // starting zoom
+        center: [-98.65177, 29.41824] // [lng, lat]
 
 
     });
@@ -62,7 +62,7 @@
     // doubleClickZoom: true
 
 var faveRes = [
-    { address: "1739 SW Loop Ste 501, San Antonio, San Antonio",
+    { address: "1739 SW Loop Ste 501, San Antonio",
         popupHTML: "<p>Wingstop, counter-serve chicken wing chain</p>"
 
 },
@@ -72,8 +72,8 @@ var faveRes = [
     },
     {
         address: "1749 SW Loop 410, San Antonio",
-        popupHtml: "<p>Pizza Hut, Casual pizza chain with a wide selection</p>"
-    },
+        popupHTML: "<p>Pizza Hut, Casual pizza chain with a wide selection</p>"
+    }
 ]
 
 
@@ -84,8 +84,8 @@ var faveRes = [
             var marker = new mapboxgl.Marker()
                 .setLngLat(coordinates)
                 .addTo(map)
-                .setPopup(popup);
-            popup.addTo(map);
+                marker.setPopup(popup);
+            // popup.addTo(map);
         });
     }
 
@@ -97,6 +97,10 @@ var faveRes = [
 
     doubleClickZoom: true
 
+    // var alamoPopup = new mapboxgl.Popup()
+    //     .setHTML("<p>Remember The Alamo!</p>")
+    //
+    // marker.setPopup(alamoPopup)
 
 
 
