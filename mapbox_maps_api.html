@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox</title>
+    <!-- Mapbox JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <!-- Mapbox CSS -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox Geocoder Util Methods -->
+<script src="js/mapbox-geocoder-utils.js"></script>
+
+<!-- Custom JS -->
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY29uc3VlbGxhbW9vcmUiLCJhIjoiY2xneTYxNDNkMDNsdzNmc2Fxb3lnNDh0NiJ9.eUQ9t5gow8M8I3zNKTdXgA';
+
+
+
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        zoom: 5, // starting zoom
+        center: [-98.63892, 29.38096] // [lng, lat]
+
+
+    });
+
+    // var marker = new mapboxgl.Marker()
+    //     .setLngLat([-98.65045, 29.41549])
+    //     .addTo(map);
+    //
+    //
+    //
+    // var markerOne = new mapboxgl.Marker()
+    //     .setLngLat([-98.65127, 29.65126])
+    //     .addTo(map);
+    //
+    //
+    // var markerTwo = new mapboxgl.Marker()
+    //     .setLngLat([-98.65102, 29.41292])
+    //     .addTo(map);
+
+
+
+
+
+    // doubleClickZoom: true
+
+var faveRes = [
+    { address: "1739 SW Loop Ste 501, San Antonio, San Antonio",
+        popupHTML: "<p>Wingstop, counter-serve chicken wing chain</p>"
+
+},
+    {
+        address: "1739 SW Loop 410 #201-204, San Antonio",
+        popupHTML: "<p>Asia Kitchen, Classic Thai fare in a casual setting</p>"
+    },
+    {
+        address: "1749 SW Loop 410, San Antonio",
+        popupHtml: "<p>Pizza Hut, Casual pizza chain with a wide selection</p>"
+    },
+]
+
+
+    function placeMarkerAndPopup(info, token, map) {
+        geocode(info.address, token).then(function(coordinates) {
+            var popup = new mapboxgl.Popup()
+                .setHTML(info.popupHTML);
+            var marker = new mapboxgl.Marker()
+                .setLngLat(coordinates)
+                .addTo(map)
+                .setPopup(popup);
+            popup.addTo(map);
+        });
+    }
+
+    faveRes.forEach(function(restaurant){
+        console.log(restaurant.address)
+
+    placeMarkerAndPopup(restaurant,  mapboxgl.accessToken, map);
+    });
+
+    doubleClickZoom: true
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
