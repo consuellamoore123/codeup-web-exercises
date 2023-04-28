@@ -12,18 +12,39 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 
-
+<script src="js/keys.js"></script>
 <script>
 
-    "use strict"
 $.get("http://api.openweathermap.org/data/2.5/weather", {
-APPID: OPEN_WEATHER_APPID,
-q:     "San Antonio, US"
+    APPID: OPEN_WEATHER_APPID,
+    lat:    29.423017,
+    lon:   -98.48527,
+    units: "imperial"
 }).done(function(data) {
-console.log(data);
+    console.log('current weather', data);
+});
+
+$.get("http://api.openweathermap.org/data/2.5/forecast", {
+    APPID: OPEN_WEATHER_APPID,
+    lat:    29.423017,
+    lon:   -98.48527,
+    units: "imperial"
+}).done(function(data) {
+    console.log('5 day forecast', data);
 });
 
 </script>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        Featured
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+    </ul>
+</div>
 
 
 
