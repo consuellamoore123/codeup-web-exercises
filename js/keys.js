@@ -1,3 +1,0 @@
-const OPEN_WEATHER_APPID ="de64afb852660126091e458b044a0a69";
-const mapboxgl.accessToken = 'pk.eyJ1IjoiY29uc3VlbGxhbW9vcmUiLCJhIjoiY2xneTYxNDNkMDNsdzNmc2Fxb3lnNDh0NiJ9.eUQ9t5gow8M8I3zNKTdXgA';
-
