@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
 
 
-#style.css > _
+/*#style.css > _*/
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@
 body {
     background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
     font-family: 'Poppins', Sans-Serif;
-    /*background-repeat: no-repeat;*/
+    background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     height: 100vh;
@@ -21,7 +21,7 @@ body {
 
 .container {
     padding: 20px 70px;
-    color: white;
+    color: #fff;
 }
 
 .current-info {
@@ -60,7 +60,7 @@ body {
 
 .place-container .country {
     font-size: 12px;
-    font-weight: 70;
+    font-weight: 700;
 }
 
 .current-info .others {
@@ -94,6 +94,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 60px;
+    /*margin: 0 10px;*/
+
 }
 
 .future-forecast .today .day{
@@ -124,15 +129,62 @@ body {
     padding: 15px;
 }
 
-.weather-forecast .weather-forecast-item .day{
+.weather-forecast .weather-forecast-item .day {
     padding: 5px 15px;
     background: #3c3c44;
     border-radius: 50px;
     text-align: center
 }
 
-.weather-forecast .weather-forecast-item .temp{
+.weather-forecast .weather-forecast-item .temp {
     font-weight: 100;
+}
+
+@media only screen and (max-width: 730px) {
+    .container{
+        padding: 20px;
+
+    }
+    .future-forecast {
+        justify-content: start;
+        align-items: none;
+        overflow-y: scroll;
+    }
+
+
+    .future-forecast .today .temp {
+        font-size: 23px;
+    }
+
+    .date-container .time {
+        font-size: 50px;
+    }
+
+    .date-container #am-pm {
+        font-size: 20px;
+    }
+
+    .date-container .date {
+        font-size: 20px;
+    }
+
+    .place-container {
+        text-align: end;
+        margin-top: 15px;
+    }
+
+    .place-container .time-zone {
+        font-size: 20px;
+    }
+
+    .current-info .other {
+        padding: 12px;
+    }
+
+    .current-info .others .weather-item {
+        font-size: 14px;
+    }
+
 }
 
 
