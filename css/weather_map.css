@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
 
 
-/*#style.css > _*/
 * {
     margin: 0;
     padding: 0;
@@ -94,9 +93,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #eee;
+    /*margin: 0 10px;*/
+    border: 0.5px solid #eee;
     border-radius: 10px;
-    padding: 50px;
+    padding: 20px;
+    background: rgba(0,0,0,0.2)
+
 
 
 }
@@ -109,7 +111,7 @@ body {
 }
 
 .future-forecast .today .temp{
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 15px;
 
 }
@@ -127,6 +129,8 @@ body {
     border: 1px solid #eee;
     border-radius: 10px;
     padding: 15px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2)
 }
 
 .weather-forecast .weather-forecast-item .day {
@@ -191,7 +195,7 @@ body {
     .future-forecast {
         justify-content: start;
         align-items: none;
-        overflow-y: scroll;
+        overflow-x: scroll;
     }
 }
 
