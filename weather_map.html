@@ -9,9 +9,10 @@
 </head>
 <body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"-->
+<!--        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"-->
+<!--        crossorigin="anonymous"></script>-->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
@@ -41,26 +42,16 @@
             </div>
 
             <div class="others" id="current-weather-items">
-                <div class="weather-item">
-                    <div>Humidity</div>
-                    <div>95.2%</div>
-                </div>
-                <div class="weather-item">
-                    <div>pressure</div>
-                    <div>121</div>
-                </div>
-                <div class="weather-item">
-                    <div>Wind Speed</div>
-                    <div>222</div>
-                </div>
-            </div>
+
         </div>
+            </div>
+
+<!--        <div id='map'></div>-->
 
     <div class="place-container">
         <div class="time-zone" id="time-zone">San Antonio</div>
         <div id="country" class="country">US</div>
     </div>
-</div>
 
 
 
@@ -73,6 +64,7 @@
         <div class="temp">Day - 35.6&#176; C</div>
     </div>
     </div>
+
 
     <div class="weather-forecast" id="weather-forecast">
         <div class="weather-forecast-item">
@@ -102,173 +94,53 @@
         <div class="weather-forecast-item">
         <img src=" https://openweathermap.org/img/wn/10d@2x.png" alt="weather Icon" class="w-icon">
         <div class="day">Sat</div>
-        <div class="temp">Night - 25.6&#176; C</div>
-        <div class="temp">Day - 35.6&#176; C</div>
+            <div class="temp">Night - 25.6&#176; C</div>
+            <div class="temp">Day - 35.6&#176; C</div>
+        </div>
+
     </div>
-        <div class="weather-forecast-item">
-        <img src=" https://openweathermap.org/img/wn/10d@2x.png" alt="weather Icon" class="w-icon">
-        <div class="day">Sun</div>
-        <div class="temp">Night - 25.6&#176; C</div>
-        <div class="temp">Day - 35.6&#176; C</div>
-    </div>
+</div>
 </div>
 
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/weather_map.js"></script>
 
+<script src="js/keys.js"></script>
 
-    <!--temperature 5 days out-->
-    <!--1st card-->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
 
-
-    <!--    <div class="container-fluid">-->
-    <!--        <div class="row d-flex: justify-content-end">-->
-    <!--            <div class="col-2.4">-->
-    <!--        <div class="card" style="width: 15rem;">-->
-    <!--            <img src="..." class="card-img-top" alt="...">-->
-    <!--            <div class="card-body">-->
-    <!--                <h5 class="card-title">Card title</h5>-->
-    <!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the-->
-    <!--                    card's content.</p>-->
-    <!--            </div>-->
-    <!--            <ul class="list-group list-group-flush">-->
-    <!--                <li class="list-group-item">An item</li>-->
-    <!--                <li class="list-group-item">A second item</li>-->
-    <!--                <li class="list-group-item">A third item</li>-->
-    <!--            </ul>-->
-    <!--            <div class="card-body">-->
-    <!--                <a href="#" class="card-link">Card link</a>-->
-    <!--                <a href="#" class="card-link">Another link</a>-->
-    <!--            </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--    &lt;!&ndash;second card&ndash;&gt;-->
-    <!--    <div class="row">-->
-    <!--        <div class="col-2.4">-->
-
-
-    <!--        <div class="card" style="width: 15rem;">-->
-    <!--            <img src="..." class="card-img-top" alt="...">-->
-    <!--            <div class="card-body">-->
-    <!--                <h5 class="card-title">Card title</h5>-->
-    <!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the-->
-    <!--                    card's content.</p>-->
-    <!--            </div>-->
-    <!--            <ul class="list-group list-group-flush">-->
-    <!--                <li class="list-group-item">An item</li>-->
-    <!--                <li class="list-group-item">A second item</li>-->
-    <!--                <li class="list-group-item">A third item</li>-->
-    <!--            </ul>-->
-    <!--            <div class="card-body">-->
-    <!--                <a href="#" class="card-link">Card link</a>-->
-    <!--                <a href="#" class="card-link">Another link</a>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--    </div>-->
-    <!--    &lt;!&ndash;    third card&ndash;&gt;-->
-    <!--    <div class="row">-->
-    <!--        <div class="col-2.4">-->
-    <!--            <div class="card" style="width: 15rem;">-->
-    <!--                <img src="..." class="card-img-top" alt="...">-->
-    <!--                <div class="card-body">-->
-    <!--                    <h5 class="card-title">Card title</h5>-->
-    <!--                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the-->
-    <!--                        card's content.</p>-->
-    <!--                </div>-->
-    <!--                <ul class="list-group list-group-flush">-->
-    <!--                    <li class="list-group-item">An item</li>-->
-    <!--                    <li class="list-group-item">A second item</li>-->
-    <!--                    <li class="list-group-item">A third item</li>-->
-    <!--                </ul>-->
-    <!--                <div class="card-body">-->
-    <!--                    <a href="#" class="card-link">Card link</a>-->
-    <!--                    <a href="#" class="card-link">Another link</a>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--        <div class="row">-->
-    <!--            <div class="col-2.4">-->
-    <!--                <div class="card" style="width: 15rem;">-->
-    <!--                    <img src="..." class="card-img-top" alt="...">-->
-    <!--                    <div class="card-body">-->
-    <!--                        <h5 class="card-title">Card title</h5>-->
-    <!--                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of-->
-    <!--                            the card's content.</p>-->
-    <!--                    </div>-->
-    <!--                    <ul class="list-group list-group-flush">-->
-    <!--                        <li class="list-group-item">An item</li>-->
-    <!--                        <li class="list-group-item">A second item</li>-->
-    <!--                        <li class="list-group-item">A third item</li>-->
-    <!--                    </ul>-->
-    <!--                    <div class="card-body">-->
-    <!--                        <a href="#" class="card-link">Card link</a>-->
-    <!--                        <a href="#" class="card-link">Another link</a>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--        <div class="row">-->
-    <!--            <div class="col-2.4">-->
-    <!--                <div class="card" style="width: 15rem;">-->
-    <!--                    <img src="..." class="card-img-top" alt="...">-->
-    <!--                    <div class="card-body">-->
-    <!--                        <h5 class="card-title">Card title</h5>-->
-    <!--                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of-->
-    <!--                            the card's content.</p>-->
-    <!--                    </div>-->
-    <!--                    <ul class="list-group list-group-flush">-->
-    <!--                        <li class="list-group-item">An item</li>-->
-    <!--                        <li class="list-group-item">A second item</li>-->
-    <!--                        <li class="list-group-item">A third item</li>-->
-    <!--                    </ul>-->
-    <!--                    <div class="card-body">-->
-    <!--                        <a href="#" class="card-link">Card link</a>-->
-    <!--                        <a href="#" class="card-link">Another link</a>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--            <div class="row">-->
-    <!--                <div class="col-2.4">-->
-    <!--                    <div class="card" style="width: 15rem;">-->
-    <!--                        <img src="..." class="card-img-top" alt="...">-->
-    <!--                        <div class="card-body">-->
-    <!--                            <h5 class="card-title">Card title</h5>-->
-    <!--                            <p class="card-text">Some quick example text to build on the card title and make up the bulk-->
-    <!--                                of the card's content.</p>-->
-    <!--                        </div>-->
-    <!--                        <ul class="list-group list-group-flush">-->
-    <!--                            <li class="list-group-item">An item</li>-->
-    <!--                            <li class="list-group-item">A second item</li>-->
-    <!--                            <li class="list-group-item">A third item</li>-->
-    <!--                        </ul>-->
-    <!--                        <div class="card-body">-->
-    <!--                            <a href="#" class="card-link">Card link</a>-->
-    <!--                            <a href="#" class="card-link">Another link</a>-->
-    <!--                        </div>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-
-    <script src="js/keys.js"></script>
     <script>
 
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
-            APPID: OPEN_WEATHER_APPID,
-            lat: 29.423017,
-            lon: -98.48527,
-            units: "imperial"
-        }).done(function (data) {
-            console.log('5 day forecast', data);
-        });
+        APPID: OPEN_WEATHER_APPID,
+        lat: 29.423017,
+        lon: -98.48527,
+        units: "imperial"
+    }).done(function (data) {
+        console.log('5 day forecast', data);
+    });
 
-
-        // var submitbtn =document.querySelector('.btn')
-        // var inputValue = document.querySelector('.form-control')
-        // var name = document.querySelector('.name')
 </script>
 
+
+
+
+
+
+<!--<script>-->
+<!--mapboxgl.accessToken = 'pk.eyJ1IjoiY29uc3VlbGxhbW9vcmUiLCJhIjoiY2xneTYxNDNkMDNsdzNmc2Fxb3lnNDh0NiJ9.eUQ9t5gow8M8I3zNKTdXgA';-->
+
+<!--var map = new mapboxgl.Map({-->
+<!--container: 'map', // container ID-->
+<!--style: 'mapbox://styles/mapbox/streets-v11', // style URL-->
+<!--zoom: 15, // starting zoom-->
+<!--center: [-98.65177, 29.41824] // [lng, lat]-->
+
+<!--});-->
+
+<!--</Script>-->
 
 
 </body>
