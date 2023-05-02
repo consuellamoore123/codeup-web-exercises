@@ -1,24 +1,28 @@
+(function(){
+    "use strict"
 
 
-// var map = new mapboxgl.Map({
-//     container: 'map', // container ID
-//     style: 'mapbox://styles/mapbox/streets-v11', // style URL
-//     zoom: 15, // starting zoom
-//     center: [-98.65177, 29.41824] // [lng, lat]
-//
-// });// map
-//
-// function geocode(search, token) {
-//     var baseUrl = 'https://api.mapbox.com';
-//     var endPoint = '/geocoding/v5/mapbox.places/';
-//     return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
-//         .then(function(res) {
-//             return res.json();
-//             // to get all the data from the request, comment out the following three lines...
-//         }).then(function(data) {
-//             return data.features[0].center;
-//         });
-// }
+mapboxgl.accessToken = MAPBOX_APPID
+
+var map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    zoom: 15, // starting zoom
+    center: [-98.65177, 29.41824] // [lng, lat]
+
+});
+
+function geocode(search, token) {
+    var baseUrl = 'https://api.mapbox.com';
+    var endPoint = '/geocoding/v5/mapbox.places/';
+    return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+        .then(function (res) {
+            return res.json();
+            // to get all the data from the request, comment out the following three lines...
+        }).then(function (data) {
+            return data.features[0].center;
+        });
+}
 
 // weathermap
 
@@ -35,21 +39,21 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 
-// Set Time and Date
-setInterval(() => {
-    const time = new Date();
-    const month = time.getMonth();
-    const date = time.getDate();
-    const day = time.getDay();
-    const hour = time.getHours()
-    const hoursIn12HrFormat = hour >= 13 ? hour % 12 : hour
-    const minutes = time.getMinutes();
-    const ampm = hour >= 12 ? "PM" : "AM"
+// // Set Time and Date
+// setInterval(() => {
+//     const time = new Date();
+//     const month = time.getMonth();
+//     const date = time.getDate();
+//     const day = time.getDay();
+//     const hour = time.getHours()
+//     const hoursIn12HrFormat = hour >= 13 ? hour % 12 : hour
+//     const minutes = time.getMinutes();
+//     const ampm = hour >= 12 ? "PM" : "AM"
 
-    timeEl.innerHTML = (hoursIn12HrFormat < 10 ? "0" + hoursIn12HrFormat : hoursIn12HrFormat) + ":" + (minutes< 10? "0"+ minutes: minutes) + `<span id="am-pm">${ampm}</span>`
+    // timeEl.innerHTML = (hoursIn12HrFormat < 10 ? "0" + hoursIn12HrFormat : hoursIn12HrFormat) + ":" + (minutes < 10 ? "0" + minutes : minutes) + `<span id="am-pm">${ampm}</span>`
 
-    dateEl.innerHTML = days[day] + ", " + date+ " " + months[month]
-}, 1000);
+//     dateEl.innerHTML = days[day] + ", " + date+ " " + months[month]
+// }, 1000);
 
 getWeatherData()
 
@@ -66,7 +70,7 @@ function getWeatherData() {
         });
     });
 }
-
+//
 function showWeatherData(data) {
     let {humidity, pressure, sunrise, sunset, wind_speed} = data.current;
 
@@ -119,21 +123,28 @@ function showWeatherData(data) {
         </div>`
         }
        // let search = function(){
-       //   this.fetchWeather(document.querySelector(".btn").value)
-        })
+        //   this.fetchWeather(document.querySelector(".btn").value)
+    })
     weatherForecastEl.innerHTML = otherDayForecast;
-    }
-
+}
 
 
 // showWeatherData().addEventListener('click', searchWeather);
 //     currentWeatherItemEl
 // });
 
+map.on("click", (e) => {
+    var lng = (e.lngLat.lng);
+    var lat = (e.lngLat.lat);
+    reverseGeocode({lng: lng, lat: lat}, MAPBOX_APPID)
+})
 
 
 
 
+
+
+})();
 
 
 
