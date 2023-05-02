@@ -1,5 +1,13 @@
-// map
 
+
+// var map = new mapboxgl.Map({
+//     container: 'map', // container ID
+//     style: 'mapbox://styles/mapbox/streets-v11', // style URL
+//     zoom: 15, // starting zoom
+//     center: [-98.65177, 29.41824] // [lng, lat]
+//
+// });// map
+//
 // function geocode(search, token) {
 //     var baseUrl = 'https://api.mapbox.com';
 //     var endPoint = '/geocoding/v5/mapbox.places/';
@@ -110,13 +118,21 @@ function showWeatherData(data) {
             <div class="temp">Day - ${day.temp.day}&#176; C</div>
         </div>`
         }
-    });
+       // let search = function(){
+       //   this.fetchWeather(document.querySelector(".btn").value)
+        })
+    weatherForecastEl.innerHTML = otherDayForecast;
+    }
+
+
+
+// showWeatherData().addEventListener('click', searchWeather);
+//     currentWeatherItemEl
+// });
 
 
 
 
-weatherForecastEl.innerHTML = otherDayForecast;
-}
 
 
 
