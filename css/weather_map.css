@@ -128,7 +128,7 @@ background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
         display: flex;
         justify-content: center;
         align-content: space-between;
-        width: 600px;
+        width: 550px;
         overflow: auto;
     }
 
