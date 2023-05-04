@@ -104,7 +104,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
         marker = new mapboxgl.Marker()
             .setLngLat([lng, lat])
             .addTo(map)
-        map.setCenter([lng, lat]);
+        map.flyTo({center: lng, lat});
         // map.setZoom(5)
 
     })
@@ -125,8 +125,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
             marker = new mapboxgl.Marker()
                 .setLngLat([lng, lat])
                 .addTo(map)
-            map.setCenter([lng, lat]);
-            // map.setZoom(5)
+            map.flyTo({center: [lng, lat]});
             getWeatherData(lat, lng, OPEN_WEATHER_APPID);
         })
     }

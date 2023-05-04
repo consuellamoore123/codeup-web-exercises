@@ -109,7 +109,7 @@ background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
 
 #map {
     /*//the width and height may be set to any size*/
-    background-Size: cover;
+    /*background-Size: cover;*/
     width: 70%;
     height: 300px;
 
