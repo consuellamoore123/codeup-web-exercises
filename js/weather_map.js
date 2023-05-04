@@ -130,7 +130,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
             getWeatherData(lat, lng, OPEN_WEATHER_APPID);
         })
     }
-    geocodeAddressMarker("San Antonio", MAPBOX_APPID);
+
 
 
     const searchButton = $(`.btn`)
@@ -142,6 +142,8 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
         geocodeAddressMarker(userInput, MAPBOX_APPID)
 
     });
+
+    geocodeAddressMarker("San Antonio", MAPBOX_APPID);
 
 
 
