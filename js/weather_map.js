@@ -105,9 +105,11 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
             .setLngLat([lng, lat])
             .addTo(map)
         map.setCenter([lng, lat]);
-        map.setZoom(15)
+        map.setZoom(16)
 
     })
+
+
 // add zoom to map
     map.addControl(new mapboxgl.NavigationControl());
 
@@ -124,10 +126,11 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                 .setLngLat([lng, lat])
                 .addTo(map)
             map.setCenter([lng, lat]);
-            map.setZoom(15)
+            map.setZoom(16)
             getWeatherData(lat, lng, OPEN_WEATHER_APPID);
         })
     }
+    geocodeAddressMarker("San Antonio", MAPBOX_APPID);
 
 
     const searchButton = $(`.btn`)
@@ -139,6 +142,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
         geocodeAddressMarker(userInput, MAPBOX_APPID)
 
     });
+
 
 
 })();
