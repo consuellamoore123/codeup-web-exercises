@@ -105,7 +105,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
             .setLngLat([lng, lat])
             .addTo(map)
         map.setCenter([lng, lat]);
-        map.setZoom(16)
+        // map.setZoom(5)
 
     })
 
@@ -126,7 +126,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                 .setLngLat([lng, lat])
                 .addTo(map)
             map.setCenter([lng, lat]);
-            map.setZoom(16)
+            // map.setZoom(5)
             getWeatherData(lat, lng, OPEN_WEATHER_APPID);
         })
     }
