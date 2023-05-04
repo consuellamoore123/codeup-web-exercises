@@ -84,7 +84,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 
     var map = new mapboxgl.Map({
         container: 'map', // container ID
-        style: 'mapbox://styles/consuellamoore/clh8iwnja002501nx5iysb5gi', // style URL
+        style: 'mapbox://styles/consuellamoore/clh8rpbsr005401o3chn843py', // style URL
         zoom: 15, // starting zoom
         center: [-98.65177, 29.41824] // [lng, lat]
 

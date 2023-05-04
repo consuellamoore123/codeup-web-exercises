@@ -23,14 +23,19 @@ body {
 .navbar{
 background-color: rgb(46, 105, 153, 0.9)
 
+
 }
 
 .navbar-light .navbar-brand {
+    font-weight: 200;
     color: #ECE7E5;
+    /*color: white;*/
     font-family:  "Poppins", Sans-Serif;
 }
 
 .btn{
+    font-weight: 100;
+    /*color: white;*/
     color: #ECE7E5;
     font-family:  "Poppins", Sans-Serif;
 }
@@ -48,11 +53,15 @@ background-color: rgb(46, 105, 153, 0.9)
 }
 
 footer a {
-    color: white;
+    color: #ECE7E5;
+    font-weight: 100;
+    text-decoration: none;
 }
 
 h6{
-    color: #ECE7E5;
+    font-weight: 200;
+    color: white;
+    /*color: #ECE7E5;*/
     font-family:  "Poppins", Sans-Serif;
 }
 
@@ -69,6 +78,8 @@ h6{
 background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
     font-family:  "Poppins", Sans-Serif;
     color: #ECE7E5;
+    font-weight: 200;
+    /*color: white;*/
 }
 
 .card-footer:last-child{
@@ -77,6 +88,7 @@ background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
 
 .card {
     font-family: "Poppins", Sans-Serif;
+    font-weight: 100;
     width: 200px;
     border-color: rgb(49, 88, 149);
 
@@ -85,6 +97,7 @@ background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
 
 .card-text{
     color: white;
+    font-weight: 100;
 }
 
 
