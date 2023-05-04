@@ -2,40 +2,15 @@
     "use strict"
 
 
-// weathermap
 
-const timeEl = document.getElementById("time");
-const dateEl = document.getElementById("date");
-const currentWeatherItemEl = document.getElementById("current-weather-items");
-const timezone = document.getElementById("time-zone");
-const countryEl = document.getElementById("country");
-const weatherForecastEl = document.getElementById("weather-forecast");
-const currentTempEl = document.getElementById("current-temp");
 
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
-//
-// // Set Time and Date
-// setInterval(() => {
-//     const time = new Date();
-//     const month = time.getMonth();
-//     const date = time.getDate();
-//     const day = time.getDay();
-//     const hour = time.getHours()
-//     const hoursIn12HrFormat = hour >= 13 ? hour % 12 : hour
-//     const minutes = time.getMinutes();
-//     const ampm = hour >= 12 ? "PM" : "AM"
-//
-//     timeEl.innerHTML = (hoursIn12HrFormat < 10 ? "0" + hoursIn12HrFormat : hoursIn12HrFormat) + ":" + (minutes < 10 ? "0" + minutes : minutes) + `<span id="am-pm">${ampm}</span>`
-//
-// <!--       dateEl.innerHTML = days[day] + ", " + date+ " " + months[month]-->
-//     <!--}, 1000);-->
-//
 
 
-// Get Weather Data
+//Weather Call
     const getWeatherData = (lat, lng, key) => {
         navigator.geolocation.getCurrentPosition((success) => {
             console.log(success);
@@ -87,8 +62,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
     <h6 class="card-title">Wind Speed: ${windSpeed}</h6>
     <br>
     
-    <h6 class="card-title">Sunrise: ${window.moment(sunrise * 1000).format('HH:mm a')}</h6>
-    <h6 class="card-title">Sunset: ${window.moment(sunset * 1000).format('HH:mm a')}</h6>
+
    
   </div>
   <div class="card-footer text-muted"></div>
@@ -110,7 +84,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 
     var map = new mapboxgl.Map({
         container: 'map', // container ID
-        style: 'mapbox://styles/mapbox/streets-v12', // style URL
+        style: 'mapbox://styles/consuellamoore/clh8iwnja002501nx5iysb5gi', // style URL
         zoom: 15, // starting zoom
         center: [-98.65177, 29.41824] // [lng, lat]
 
