@@ -38,6 +38,49 @@ const users = [
 
 
 //Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
-var languages = languages.filter(function(language){
-    languages === 3
+var numberOFLanguages = users.filter(function(user){
+    return user.languages.length > 2;
 })
+console.log(numberOFLanguages)
+
+
+//Use .map to create an array of strings where each element is a user's email address
+var userEmail = users.map(function(user){
+    return user.email
+});
+console.log(userEmail)
+
+//Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
+
+var totalExp= users.reduce(function(total, user){
+    return total + user.yearsOfExperience
+},0);
+    console.log(totalExp)
+
+var averageExp = totalExp/users.length
+
+console.log(averageExp)
+
+
+//Use .reduce to get the longest email from the list of users.
+
+var longestEmail = users.reduce(function(longest, user){
+    if(user.email.length > longest.length){
+        longest = user.email;
+    }
+    console.log(longest)
+    return longest
+},"");
+    console.log(longestEmail)
+
+
+//Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+var nameString = users.reduce(function(stringName, user){
+    if (stringName === ""){
+        stringName = "Your instructors are " + user.name;
+    }else if (stringName != ""){
+            stringName += ", " + user.name;
+    }
+    return stringName;
+    },"");
+    console.log(nameString)
